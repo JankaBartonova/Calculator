@@ -11,7 +11,6 @@ namespace Calculator.Tests.Volume
         [InlineData(2, 8)]
         [InlineData(1.5, 3.375)]
         [InlineData(double.MaxValue, double.PositiveInfinity)]
-        [InlineData(double.MinValue, double.NegativeInfinity)]
         public void VolumeCube_ArgGiven_ReturnsCalculatedValue(double a, double expected)
         {
             var cube = new Cube();
@@ -21,12 +20,14 @@ namespace Calculator.Tests.Volume
             Assert.Equal(actual, expected);
         }
 
-        [Fact]
-        public void VolumeCube_ArgIsLessThanZero_ReturnsException()
+        [Theory]
+        [InlineData(-1)]
+        [InlineData(double.MinValue)]
+        public void VolumeCube_ArgIsLessThanZero_ReturnsException(double a)
         {
             var cube = new Cube();
 
-            Assert.Throws<ArgumentException>(() => cube.Calculate(-1));
+            Assert.Throws<ArgumentException>(() => cube.Calculate(a));
         }
 
         [Fact]

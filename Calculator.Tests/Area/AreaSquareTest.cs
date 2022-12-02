@@ -10,7 +10,6 @@ namespace Calculator.Tests.Area
         [InlineData(1, 1)]
         [InlineData(1.5, 2.25)]
         [InlineData(double.MaxValue, double.PositiveInfinity)]
-        [InlineData(double.MinValue, double.PositiveInfinity)]
         public void AreaSquare_ArgGiven_ReturnsCalculatedValue(double a, double expected)
         {
             var square = new Square();
@@ -20,12 +19,14 @@ namespace Calculator.Tests.Area
             Assert.Equal(expected, actual);
         }
 
-        [Fact]
-        public void AreaSquare_ArgIsLessThanZero_ReturnsException()
+        [Theory]
+        [InlineData(-1)]
+        [InlineData(double.MinValue)]
+        public void AreaSquare_ArgIsLessThanZero_ReturnsException(double a)
         {
             var square = new Square();
 
-            Assert.Throws<ArgumentException>(() => square.Calculate(-1));
+            Assert.Throws<ArgumentException>(() => square.Calculate(a));
         }
 
         [Fact]

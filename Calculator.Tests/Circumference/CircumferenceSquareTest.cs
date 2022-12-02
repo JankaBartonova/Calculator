@@ -20,12 +20,14 @@ namespace Calculator.Tests.Circumference
             Assert.Equal(actual, expected);
         }
 
-        [Fact]
-        public void CircumferenceSquare_ArgAreLessThanZero_ReturnsException()
+        [Theory]
+        [InlineData(-1)]
+        [InlineData(double.MinValue)]
+        public void CircumferenceSquare_ArgAreLessThanZero_ReturnsException(double a)
         {
             var square = new Square();
 
-            Assert.Throws<ArgumentException>(() => square.Calculate(-1));
+            Assert.Throws<ArgumentException>(() => square.Calculate(a));
         }
 
         [Fact]

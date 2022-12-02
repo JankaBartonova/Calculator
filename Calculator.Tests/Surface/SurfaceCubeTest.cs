@@ -11,7 +11,6 @@ namespace Calculator.Tests.Surface
         [InlineData(2, 24)]
         [InlineData(1.5, 13.5)]
         [InlineData(double.MaxValue, double.PositiveInfinity)]
-        [InlineData(double.MinValue, double.PositiveInfinity)]
         public void SurfaceCube_ArgsGiven_ReturnsCalculatedValue(double a, double expected)
         {
             var cube = new Cube();
@@ -21,12 +20,14 @@ namespace Calculator.Tests.Surface
             Assert.Equal(actual, expected);
         }
 
-        [Fact]
-        public void SurfaceCube_ArgIsLessThanZero_ReturnsException()
+        [Theory]
+        [InlineData(-1)]
+        [InlineData(double.MinValue)]
+        public void SurfaceCube_ArgIsLessThanZero_ReturnsException(double a)
         {
             var cube = new Cube();
 
-            Assert.Throws<ArgumentException>(() => cube.Calculate(-1));
+            Assert.Throws<ArgumentException>(() => cube.Calculate(a));
         }
 
         [Fact]

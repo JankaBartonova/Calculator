@@ -13,11 +13,6 @@ namespace Calculator.Tests.Volume
         [InlineData(1, 1, 1.5, 1.5)]
         [InlineData(double.MaxValue, 1, 1, double.MaxValue)]
         [InlineData(double.MaxValue, 1, 2, double.PositiveInfinity)]
-        [InlineData(double.MinValue, 1, 1, double.MinValue)]
-        [InlineData(double.MinValue, -1, 1, double.MaxValue)]
-        [InlineData(double.MinValue, -1, -1, double.MinValue)]
-        [InlineData(double.MinValue, -1, -2, double.NegativeInfinity)]
-        [InlineData(double.MinValue, 1, -2, double.PositiveInfinity)]
         public void VolumeBlock_ArgGiven_ReturnsCalculatedValue(double a, double b, double c, double expected)
         {
             var block = new Block();
@@ -31,6 +26,9 @@ namespace Calculator.Tests.Volume
         [InlineData(-1, 1, 1)]
         [InlineData(1, -1, 1)]
         [InlineData(1, 1, -1)]
+        [InlineData(double.MinValue, 1, 1)]
+        [InlineData(1, double.MinValue, 1)]
+        [InlineData(1, 1, double.MinValue)]
         public void VolumeBlock_ArgsAreLessThanZero_ReturnsException(double a, double b, double c)
         {
             var block = new Block();

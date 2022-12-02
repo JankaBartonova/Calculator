@@ -23,6 +23,8 @@ namespace Calculator.Tests.Circumference
         [Theory]
         [InlineData(-1, 1)]
         [InlineData(1, -1)]
+        [InlineData(double.MinValue, 1)]
+        [InlineData(1, double.MinValue)]
         public void CircumferenceRectangle_ArgsAreLessThanZero_ReturnsException(double a, double b)
         {
             var rectangle = new Rectangle();
