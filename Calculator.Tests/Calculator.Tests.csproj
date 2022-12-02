@@ -20,16 +20,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Area\" />
-    <None Remove="Circumference\" />
-    <None Remove="Volume\" />
     <None Remove="Sphere\" />
+    <None Remove="Calculations\" />
+    <None Remove="Calculations\Area\" />
+    <None Remove="Calculations\Circumference\" />
+    <None Remove="Calculations\Surface\" />
+    <None Remove="Calculations\Volume\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Area\" />
-    <Folder Include="Circumference\" />
-    <Folder Include="Volume\" />
-    <Folder Include="Surface\" />
+    <Folder Include="Calculations\" />
+    <Folder Include="Calculations\Area\" />
+    <Folder Include="Calculations\Circumference\" />
+    <Folder Include="Calculations\Surface\" />
+    <Folder Include="Calculations\Volume\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Calculator.Domain\Calculator.Domain.csproj" />

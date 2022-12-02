@@ -1,8 +1,9 @@
 ﻿using System;
 using Xunit;
-using Calculator.Domain.Area;
+using Calculator.Domain.Calculations.Area;
+using Calculator.Domain.Exceptions;
 
-namespace Calculator.Tests.Area
+namespace Calculator.Tests.Calculations.Area
 {
     public class AreaRectangleTest
     {
@@ -34,7 +35,7 @@ namespace Calculator.Tests.Area
         {
             var rectangle = new Rectangle();
 
-            Assert.Throws<ArgumentException>(() => rectangle.Calculate(a, b));
+            Assert.Throws<NegativeNumbersException>(() => rectangle.Calculate(a, b));
         }
 
         [Theory]
@@ -44,7 +45,7 @@ namespace Calculator.Tests.Area
         {
             var rectangle = new Rectangle();
 
-            Assert.Throws<ArgumentException>(() => rectangle.Calculate(a, b));
+            Assert.Throws<NotANumbersException>(() => rectangle.Calculate(a, b));
         }
     }
 }

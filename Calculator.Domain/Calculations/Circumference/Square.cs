@@ -1,6 +1,7 @@
 ﻿using System;
+using Calculator.Domain.Exceptions;
 
-namespace Calculator.Domain.Circumference
+namespace Calculator.Domain.Calculations.Circumference
 {
     public class Square
     {
@@ -8,12 +9,12 @@ namespace Calculator.Domain.Circumference
         {
             if (a < 0)
             {
-                throw new ArgumentException("The number must be positive");
+                throw new NegativeNumberException();
             }
 
             if (double.IsNaN(a))
             {
-                throw new ArgumentException("The input must be a number");
+                throw new NotANumberException();
             }
 
             return 4 * a;

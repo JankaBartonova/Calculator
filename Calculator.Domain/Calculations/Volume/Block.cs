@@ -1,6 +1,7 @@
 ﻿using System;
+using Calculator.Domain.Exceptions;
 
-namespace Calculator.Domain.Volume
+namespace Calculator.Domain.Calculations.Volume
 {
     public class Block
     {
@@ -8,12 +9,12 @@ namespace Calculator.Domain.Volume
         {
             if ((a < 0) || (b < 0) || (c < 0))
             {
-                throw new ArgumentException("The numbers must be positive");
+                throw new NegativeNumbersException();
             }
 
             if (double.IsNaN(a) || double.IsNaN(b) || double.IsNaN(c))
             {
-                throw new ArgumentException("The input has to be numbers");
+                throw new NotANumbersException();
             }
 
             return a * b * c;

@@ -1,8 +1,9 @@
 ﻿using System;
 using Xunit;
-using Calculator.Domain.Circumference;
+using Calculator.Domain.Calculations.Circumference;
+using Calculator.Domain.Exceptions;
 
-namespace Calculator.Tests.Circumference
+namespace Calculator.Tests.Calculations.Circumference
 {
     public class CircumferenceReclangleTest
     {
@@ -29,7 +30,7 @@ namespace Calculator.Tests.Circumference
         {
             var rectangle = new Rectangle();
 
-            Assert.Throws<ArgumentException>(() => rectangle.Calculate(a, b));
+            Assert.Throws<NegativeNumbersException>(() => rectangle.Calculate(a, b));
         }
 
         [Theory]
@@ -39,7 +40,7 @@ namespace Calculator.Tests.Circumference
         {
             var rectangle = new Rectangle();
 
-            Assert.Throws<ArgumentException>(() => rectangle.Calculate(a, b));
+            Assert.Throws<NotANumbersException>(() => rectangle.Calculate(a, b));
         }
     }
 }

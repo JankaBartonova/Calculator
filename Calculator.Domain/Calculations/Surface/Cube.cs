@@ -1,6 +1,7 @@
 ﻿using System;
+using Calculator.Domain.Exceptions;
 
-namespace Calculator.Domain.Volume
+namespace Calculator.Domain.Calculations.Surface
 {
     public class Cube
     {
@@ -8,15 +9,15 @@ namespace Calculator.Domain.Volume
         {
             if (a < 0)
             {
-                throw new ArgumentException("The number must be positive");
+                throw new NegativeNumberException();
             }
 
             if (double.IsNaN(a))
             {
-                throw new ArgumentException("The input must be a number");
+                throw new NotANumberException();
             }
 
-            return a * a * a;
+            return 6 * a * a;
         }
     }
 }

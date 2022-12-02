@@ -1,6 +1,7 @@
 ﻿using System;
+using Calculator.Domain.Exceptions;
 
-namespace Calculator.Domain.Circumference
+namespace Calculator.Domain.Calculations.Area
 {
     public class Rectangle
     {
@@ -8,15 +9,15 @@ namespace Calculator.Domain.Circumference
         {
             if ((a < 0) || (b < 0))
             {
-                throw new ArgumentException("The numbers must be positive");
+                throw new NegativeNumbersException();
             }
 
             if (double.IsNaN(a) || double.IsNaN(b))
             {
-                throw new ArgumentException("The input has to be numbers");
+                throw new NotANumbersException();
             }
 
-            return 2 * (a + b);
+            return a * b;
         }
     }
 }

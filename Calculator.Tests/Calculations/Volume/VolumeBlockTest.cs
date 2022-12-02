@@ -1,8 +1,9 @@
 ﻿using System;
 using Xunit;
-using Calculator.Domain.Volume;
+using Calculator.Domain.Calculations.Volume;
+using Calculator.Domain.Exceptions;
 
-namespace Calculator.Tests.Volume
+namespace Calculator.Tests.Calculations.Volume
 {
     public class VolumeBlockTest
     {
@@ -33,7 +34,7 @@ namespace Calculator.Tests.Volume
         {
             var block = new Block();
 
-            Assert.Throws<ArgumentException>(() => block.Calculate(a, b, c));
+            Assert.Throws<NegativeNumbersException>(() => block.Calculate(a, b, c));
         }
 
         [Theory]
@@ -44,7 +45,7 @@ namespace Calculator.Tests.Volume
         {
             var block = new Block();
 
-            Assert.Throws<ArgumentException>(() => block.Calculate(a, b, c));
+            Assert.Throws<NotANumbersException>(() => block.Calculate(a, b, c));
         }
     }
 }

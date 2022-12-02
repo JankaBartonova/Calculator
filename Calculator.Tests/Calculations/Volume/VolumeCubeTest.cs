@@ -1,8 +1,9 @@
 ﻿using System;
 using Xunit;
-using Calculator.Domain.Volume;
+using Calculator.Domain.Calculations.Volume;
+using Calculator.Domain.Exceptions;
 
-namespace Calculator.Tests.Volume
+namespace Calculator.Tests.Calculations.Volume
 {
     public class VolumeCubeTest
     {
@@ -27,7 +28,7 @@ namespace Calculator.Tests.Volume
         {
             var cube = new Cube();
 
-            Assert.Throws<ArgumentException>(() => cube.Calculate(a));
+            Assert.Throws<NegativeNumberException>(() => cube.Calculate(a));
         }
 
         [Fact]
@@ -35,7 +36,7 @@ namespace Calculator.Tests.Volume
         {
             var cube = new Cube();
 
-            Assert.Throws<ArgumentException>(() => cube.Calculate(double.NaN));
+            Assert.Throws<NotANumberException>(() => cube.Calculate(double.NaN));
         }
     }
 }

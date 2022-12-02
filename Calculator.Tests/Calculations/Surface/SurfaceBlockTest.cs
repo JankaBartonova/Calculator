@@ -1,8 +1,9 @@
 ﻿using System;
 using Xunit;
-using Calculator.Domain.Surface;
+using Calculator.Domain.Calculations.Surface;
+using Calculator.Domain.Exceptions;
 
-namespace Calculator.Tests.Surface
+namespace Calculator.Tests.Calculations.Surface
 {
     public class SurfaceBlockTest
     {
@@ -32,7 +33,7 @@ namespace Calculator.Tests.Surface
         {
             var block = new Block();
 
-            Assert.Throws<ArgumentException>(() => block.Calculate(a, b, c));
+            Assert.Throws<NegativeNumbersException>(() => block.Calculate(a, b, c));
         }
 
         [Theory]
@@ -43,7 +44,7 @@ namespace Calculator.Tests.Surface
         {
             var block = new Block();
 
-            Assert.Throws<ArgumentException>(() => block.Calculate(a, b, c));
+            Assert.Throws<NotANumbersException>(() => block.Calculate(a, b, c));
         }
     }
 }

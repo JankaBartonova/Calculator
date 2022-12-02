@@ -1,8 +1,9 @@
 ﻿using System;
 using Xunit;
-using Calculator.Domain.Circumference;
+using Calculator.Domain.Calculations.Circumference;
+using Calculator.Domain.Exceptions;
 
-namespace Calculator.Tests.Circumference
+namespace Calculator.Tests.Calculations.Circumference
 {
     public class CircumferenceSquareTest
     {
@@ -27,7 +28,7 @@ namespace Calculator.Tests.Circumference
         {
             var square = new Square();
 
-            Assert.Throws<ArgumentException>(() => square.Calculate(a));
+            Assert.Throws<NegativeNumberException>(() => square.Calculate(a));
         }
 
         [Fact]
@@ -35,7 +36,7 @@ namespace Calculator.Tests.Circumference
         {
             var square = new Square();
 
-            Assert.Throws<ArgumentException>(() => square.Calculate(double.NaN));
+            Assert.Throws<NotANumberException>(() => square.Calculate(double.NaN));
         }
     }
 }

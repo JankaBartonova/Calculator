@@ -1,8 +1,9 @@
 ﻿using System;
 using Xunit;
-using Calculator.Domain.Area;
+using Calculator.Domain.Calculations.Area;
+using Calculator.Domain.Exceptions;
 
-namespace Calculator.Tests.Area
+namespace Calculator.Tests.Calculations.Area
 {
     public class AreaSquareTest
     {
@@ -26,7 +27,7 @@ namespace Calculator.Tests.Area
         {
             var square = new Square();
 
-            Assert.Throws<ArgumentException>(() => square.Calculate(a));
+            Assert.Throws<NegativeNumberException>(() => square.Calculate(a));
         }
 
         [Fact]
@@ -34,7 +35,7 @@ namespace Calculator.Tests.Area
         {
             var square = new Square();
 
-            Assert.Throws<ArgumentException>(() => square.Calculate(double.NaN));
+            Assert.Throws<NotANumberException>(() => square.Calculate(double.NaN));
         }
     }
 }

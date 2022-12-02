@@ -6,15 +6,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Area\" />
-    <None Remove="Circumference\" />
-    <None Remove="Surface\" />
-    <None Remove="Volume\" />
+    <None Remove="Exceptions\" />
+    <None Remove="Calculations\" />
+    <None Remove="Calculations\Area\" />
+    <None Remove="Calculations\Circumference\" />
+    <None Remove="Calculations\Surface\" />
+    <None Remove="Calculations\Volume\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Area\" />
-    <Folder Include="Circumference\" />
-    <Folder Include="Surface\" />
-    <Folder Include="Volume\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Calculations\" />
+    <Folder Include="Calculations\Area\" />
+    <Folder Include="Calculations\Circumference\" />
+    <Folder Include="Calculations\Surface\" />
+    <Folder Include="Calculations\Volume\" />
   </ItemGroup>
 </Project>
