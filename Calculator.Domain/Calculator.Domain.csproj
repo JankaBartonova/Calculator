@@ -12,6 +12,7 @@
     <None Remove="Calculations\Circumference\" />
     <None Remove="Calculations\Surface\" />
     <None Remove="Calculations\Volume\" />
+    <None Remove="CommandDotNet" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Exceptions\" />
@@ -20,5 +21,8 @@
     <Folder Include="Calculations\Circumference\" />
     <Folder Include="Calculations\Surface\" />
     <Folder Include="Calculations\Volume\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommandDotNet" Version="6.0.5" />
   </ItemGroup>
 </Project>
