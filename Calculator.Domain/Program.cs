@@ -6,7 +6,11 @@ namespace Calculator.Domain
     class Program
     {
         static void Main(string[] args)
-        { 
+        {
+            Console.WriteLine("Calulator");
+            Console.WriteLine("---------");
+            Console.WriteLine();
+
             new AppRunner<Program>().Run(args);
         }
 
