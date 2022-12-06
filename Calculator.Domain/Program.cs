@@ -72,16 +72,20 @@ namespace Calculator.Domain
         })]
         public void CubeSurface(double a)
         {
-            var block = new Calculations.Surface.Block();
-            Console.WriteLine(block.Calculate(a, b, c));
+            var cube = new Calculations.Surface.Cube();
+            Console.WriteLine(cube.Calculate(a));
         }
 
         [Command(
         Description = "Calculate volume of a cube of given size",
         UsageLines = new[]
         {
-            var block = new Calculations.Volume.Block();
-            Console.WriteLine(block.Calculate(a, b, c));
+            "%AppName% %CmdPath% <a>"
+        })]
+        public void CubeVolume(double a)
+        {
+            var cube = new Calculations.Volume.Cube();
+            Console.WriteLine(cube.Calculate(a));
         }
 
 
