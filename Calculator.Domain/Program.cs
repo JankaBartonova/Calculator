@@ -14,12 +14,24 @@ namespace Calculator.Domain
             new AppRunner<Program>().Run(args);
         }
 
+        [Command(
+        Description = "Calculate area of a square of given size",
+        UsageLines = new[]
+        {
+            "%AppName% %CmdPath% <a>"
+        })]
         public void SquareArea(double a)
         {
             var square = new Calculations.Area.Square();
             Console.WriteLine(square.Calculate(a));
         }
 
+        [Command(
+        Description = "Calculate circumference of a square of given size",
+        UsageLines = new[]
+        {
+            "%AppName% %CmdPath% <a>"
+        })]
         public void SquareCircumference(double a)
         {
             var square = new Calculations.Circumference.Square();
@@ -27,12 +39,24 @@ namespace Calculator.Domain
         }
 
 
+        [Command(
+        Description = "Calculate area of a rectangle of given size",
+        UsageLines = new[]
+        {
+            "%AppName% %CmdPath% <a> <b>"
+        })]
         public void RectangleArea(double a, double b)
         {
             var rectangle = new Calculations.Area.Rectangle();
             Console.WriteLine(rectangle.Calculate(a, b));
         }
 
+        [Command(
+        Description = "Calculate Circumference of a rectangle of given size",
+        UsageLines = new[]
+        {
+            "%AppName% %CmdPath% <a> <b>"
+        })]
         public void RectangleCircumference(double a, double b)
         {
             var rectangle = new Calculations.Circumference.Rectangle();
@@ -40,25 +64,45 @@ namespace Calculator.Domain
         }
 
 
-        public void CubeSurface(double a, double b, double c)
+        [Command(
+        Description = "Calculate surface of a cube of given size",
+        UsageLines = new[]
+        {
+            "%AppName% %CmdPath% <a>"
+        })]
+        public void CubeSurface(double a)
         {
             var block = new Calculations.Surface.Block();
             Console.WriteLine(block.Calculate(a, b, c));
         }
 
-        public void CubeVolume(double a, double b, double c)
+        [Command(
+        Description = "Calculate volume of a cube of given size",
+        UsageLines = new[]
         {
             var block = new Calculations.Volume.Block();
             Console.WriteLine(block.Calculate(a, b, c));
         }
 
 
+        [Command(
+        Description = "Calculate surface of a block of given size",
+        UsageLines = new[]
+        {
+            "%AppName% %CmdPath% <a> <b> <c>"
+        })]
         public void BlockSurface(double a, double b, double c)
         {
             var block = new Calculations.Surface.Block();
             Console.WriteLine(block.Calculate(a, b, c));
         }
 
+        [Command(
+        Description = "Calculate volume of a block of given size",
+        UsageLines = new[]
+        {
+            "%AppName% %CmdPath% <a> <b> <c>"
+        })]
         public void BlockVolume(double a, double b, double c)
         {
             var block = new Calculations.Volume.Block();
