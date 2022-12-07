@@ -52,7 +52,7 @@ namespace Calculator.Domain
         }
 
         [Command(
-        Description = "Calculate Circumference of a rectangle of given size",
+        Description = "Calculate circumference of a rectangle of given size",
         UsageLines = new[]
         {
             "%AppName% %CmdPath% <a> <b>"
