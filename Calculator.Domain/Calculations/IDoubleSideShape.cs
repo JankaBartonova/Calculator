@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Calculator.Domain.Calculations
 {
     public interface IDoubleSideShape
