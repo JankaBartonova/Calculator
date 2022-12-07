@@ -2,12 +2,10 @@
 
 Usage: dotnet Calculator.Domain.dll [command]
 
-Calculates basic operatons of basic shapes.
-Calculator executable via command line 
-
+Calculates basic operations of basic shapes.
 Shapes:
 - square
-- rectanble
+- rectangle
 - cube
 - block
 
@@ -18,11 +16,19 @@ Operations:
 - Volume
 
 Commands:
-- SquareArea <a>                Calculate area of a square of given size
-- SquareCircumference <a> <b>   Calculate circumference of a square of given size
-- RectangleArea <a> <b>         Calculate area of a rectangle of given size
-- RectableCircumference <a> <b> Calculate circumference of a rectangle of given size
-- CubeSurface <a>               Calculate surface of a cube of given size
-- CubeVolume <a>                Calculate volume of a cube of given size
-- BlockSurface <a> <b> <c>      Calculate surface of a block of given size
-- BlockVolume <a> <b> <c>       Calculate volume of a block of given size
+
+`SquareArea <a>`	Calculates area of a square of given size</p>
+
+`SquareCircumference <a> <b>`	Calculates circumference of a square of given size
+
+`RectangleArea <a> <b>`	Calculates area of a rectangle of given size
+
+`RectangleCircumference <a> <b>`	Calculates circumference of a rectangle of given size
+
+`CubeSurface <a>`	Calculates surface of a cube of given size
+
+`CubeVolume <a>`	Calculates volume of a cube of given size
+
+`BlockSurface <a> <b> <c>`	Calculates surface of a block of given size
+
+`BlockVolume <a> <b> <c>`	Calculates volume of a block of given size
