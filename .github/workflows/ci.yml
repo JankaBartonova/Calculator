@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: macOS-lastest
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v3
