@@ -3,7 +3,7 @@ using Calculator.Domain.Exceptions;
 
 namespace Calculator.Domain.Calculations.Area
 {
-    public class Square
+    public class Square : IMonoSideShape
     {
         public double Calculate(double a)
         {

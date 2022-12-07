@@ -3,7 +3,7 @@ using Calculator.Domain.Exceptions;
 
 namespace Calculator.Domain.Calculations.Area
 {
-    public class Rectangle
+    public class Rectangle : IDoubleSideShape
     {
         public double Calculate(double a, double b)
         {

@@ -3,7 +3,7 @@ using Calculator.Domain.Exceptions;
 
 namespace Calculator.Domain.Calculations.Surface
 {
-    public class Block
+    public class Block : ITrippleSideShape
     {
         public double Calculate(double a, double b, double c)
         {
