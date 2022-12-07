@@ -26,8 +26,8 @@ namespace Calculator.Domain
             var square = new Calculations.Area.Square();
             double result = square.Calculate(a);
 
-            var displayResult = new DisplayResultSquare();
-            displayResult.DisplayResult(a, result);
+            var displayResult = new MonoSideDisplayResult(a, "square", "area", result);
+            displayResult.DisplayResult();
         }
 
         [Command(
@@ -39,7 +39,10 @@ namespace Calculator.Domain
         public void SquareCircumference(double a)
         {
             var square = new Calculations.Circumference.Square();
-            Console.WriteLine(square.Calculate(a));
+            double result = square.Calculate(a);
+
+            var displayResult = new MonoSideDisplayResult(a, "square", "circumference", result);
+            displayResult.DisplayResult();
         }
 
 
@@ -77,7 +80,10 @@ namespace Calculator.Domain
         public void CubeSurface(double a)
         {
             var cube = new Calculations.Surface.Cube();
-            Console.WriteLine(cube.Calculate(a));
+            double result = cube.Calculate(a);
+
+            var displayResult = new MonoSideDisplayResult(a, "cube", "surface", result);
+            displayResult.DisplayResult();
         }
 
         [Command(
@@ -89,7 +95,10 @@ namespace Calculator.Domain
         public void CubeVolume(double a)
         {
             var cube = new Calculations.Volume.Cube();
-            Console.WriteLine(cube.Calculate(a));
+            double result = cube.Calculate(a);
+
+            var displayResult = new MonoSideDisplayResult(a, "cube", "volume", result);
+            displayResult.DisplayResult();
         }
 
 
