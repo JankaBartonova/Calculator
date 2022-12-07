@@ -1,5 +1,6 @@
 ﻿using System;
 using CommandDotNet;
+using Calculator.Domain.Views;
 
 namespace Calculator.Domain
 {
@@ -23,7 +24,10 @@ namespace Calculator.Domain
         public void SquareArea(double a)
         {
             var square = new Calculations.Area.Square();
-            Console.WriteLine(square.Calculate(a));
+            double result = square.Calculate(a);
+
+            var displayResult = new DisplayResultSquare();
+            displayResult.DisplayResult(a, result);
         }
 
         [Command(

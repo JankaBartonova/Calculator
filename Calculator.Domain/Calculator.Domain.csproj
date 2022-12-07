@@ -21,6 +21,7 @@
     <Folder Include="Calculations\Circumference\" />
     <Folder Include="Calculations\Surface\" />
     <Folder Include="Calculations\Volume\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CommandDotNet" Version="6.0.5" />
