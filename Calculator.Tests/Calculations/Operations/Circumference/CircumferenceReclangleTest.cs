@@ -17,7 +17,7 @@ namespace Calculator.Tests.Calculations.Circumference
 
             double actual = rectangle.Calculate(a, b);
 
-            Assert.Equal(actual, expected);
+            Assert.Equal(expected, actual);
         }
 
         [Theory]

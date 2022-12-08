@@ -17,7 +17,7 @@ namespace Calculator.Tests.Calculations.Circumference
 
             double actual = square.Calculate(a);
 
-            Assert.Equal(actual, expected);
+            Assert.Equal(expected, actual);
         }
 
         [Theory]

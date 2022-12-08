@@ -19,7 +19,7 @@ namespace Calculator.Tests.Calculations.Volume
 
             double actual = block.Calculate(a, b, c);
 
-            Assert.Equal(actual, expected);
+            Assert.Equal(expected, actual);
         }
 
         [Theory]

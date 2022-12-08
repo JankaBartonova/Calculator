@@ -17,7 +17,7 @@ namespace Calculator.Tests.Calculations.Volume
 
             double actual = cube.Calculate(a);
 
-            Assert.Equal(actual, expected);
+            Assert.Equal(expected, actual);
         }
 
         [Theory]
