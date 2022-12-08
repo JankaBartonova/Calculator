@@ -4,12 +4,9 @@ namespace Calculator.Domain.Exceptions
 {
     public class NotANumbersException : Exception
     {
-        public override string Message
+        public NotANumbersException()
+            : base("All the inputs have to be numbers")
         {
-            get
-            {
-                return "All the inputs have to be numbers";
-            }
         }
     }
 }

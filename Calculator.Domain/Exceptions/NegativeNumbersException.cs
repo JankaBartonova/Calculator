@@ -4,12 +4,9 @@ namespace Calculator.Domain.Exceptions
 {
     public class NegativeNumbersException : Exception
     {
-        public override string Message
+        public NegativeNumbersException()
+            : base("All the numbers have to be positive")
         {
-            get
-            {
-                return "All the numbers have to be positive";
-            }
         }
     }
 }
