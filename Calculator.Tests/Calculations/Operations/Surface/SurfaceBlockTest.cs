@@ -18,7 +18,7 @@ namespace Calculator.Tests.Calculations.Surface
 
             double actual = block.Calculate(a, b, c);
 
-            Assert.Equal(actual, expected);
+            Assert.Equal(expected, actual);
         }
 
         [Theory]

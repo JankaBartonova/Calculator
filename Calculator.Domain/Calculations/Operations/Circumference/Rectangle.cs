@@ -2,7 +2,7 @@
 
 namespace Calculator.Domain.Calculations.Operations.Circumference
 {
-    public class Rectangle : IDoubleSideShape
+    public class Rectangle : IBinaryOperation
     {
         public double Calculate(double a, double b)
         {

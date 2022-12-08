@@ -2,7 +2,7 @@
 
 namespace Calculator.Domain.Calculations.Operations.Area
 {
-    public class Rectangle : IDoubleSideShape
+    public class Rectangle : IBinaryOperation
     {
         public double Calculate(double a, double b)
         {

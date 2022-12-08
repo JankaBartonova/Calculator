@@ -17,7 +17,8 @@ namespace Calculator.Tests.Calculations.Area
 
             double actual = circle.Calculate(a);
 
-            Assert.Equal(expected, actual);
+            // result rounded to 5 decimal digits
+            Assert.Equal(expected, actual, 5);
         }
 
         [Theory]

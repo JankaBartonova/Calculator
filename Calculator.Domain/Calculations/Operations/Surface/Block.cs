@@ -2,7 +2,7 @@
 
 namespace Calculator.Domain.Calculations.Operations.Surface
 {
-    public class Block : ITrippleSideShape
+    public class Block : ITernaryOperation
     {
         public double Calculate(double a, double b, double c)
         {
