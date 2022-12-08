@@ -2,7 +2,7 @@
 
 namespace Calculator.Domain.Calculations.Operations.Surface
 {
-    public class Cube : IMonoSideShape
+    public class Cube : IUnaryOperation
     {
         public double Calculate(double a)
         {

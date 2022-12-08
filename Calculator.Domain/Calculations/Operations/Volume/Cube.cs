@@ -2,7 +2,7 @@
 
 namespace Calculator.Domain.Calculations.Operations.Volume
 {
-    public class Cube : IMonoSideShape
+    public class Cube : IUnaryOperation
     {
         public double Calculate(double a)
         {

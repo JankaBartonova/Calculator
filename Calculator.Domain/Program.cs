@@ -26,7 +26,7 @@ namespace Calculator.Domain
             var square = new Calculations.Operations.Area.Square();
             double result = square.Calculate(a);
 
-            var displayResult = new MonoSideDisplayResult();
+            var displayResult = new UnaryOperationResultView();
             displayResult.DisplayResult(a, "square", "area", result);
         }
 
@@ -41,7 +41,7 @@ namespace Calculator.Domain
             var square = new Calculations.Operations.Circumference.Square();
             double result = square.Calculate(a);
 
-            var displayResult = new MonoSideDisplayResult();
+            var displayResult = new UnaryOperationResultView();
             displayResult.DisplayResult(a, "square", "circumference", result);
         }
 
@@ -57,7 +57,7 @@ namespace Calculator.Domain
             var rectangle = new Calculations.Operations.Area.Rectangle();
             double result = rectangle.Calculate(a, b);
 
-            var displayResult = new DoubleSideDisplayResult();
+            var displayResult = new BinaryOperationResultView();
             displayResult.DisplayResult(a, b, "rectangle", "area", result);
         }
 
@@ -72,7 +72,7 @@ namespace Calculator.Domain
             var rectangle = new Calculations.Operations.Circumference.Rectangle();
             double result = rectangle.Calculate(a, b);
 
-            var displayResult = new DoubleSideDisplayResult();
+            var displayResult = new BinaryOperationResultView();
             displayResult.DisplayResult(a, b, "rectangle", "circumference", result);
         }
 
@@ -88,7 +88,7 @@ namespace Calculator.Domain
             var cube = new Calculations.Operations.Surface.Cube();
             double result = cube.Calculate(a);
 
-            var displayResult = new MonoSideDisplayResult();
+            var displayResult = new UnaryOperationResultView();
             displayResult.DisplayResult(a, "cube", "surface", result);
 
         }
@@ -104,7 +104,7 @@ namespace Calculator.Domain
             var cube = new Calculations.Operations.Volume.Cube();
             double result = cube.Calculate(a);
 
-            var displayResult = new MonoSideDisplayResult();
+            var displayResult = new UnaryOperationResultView();
             displayResult.DisplayResult(a, "cube", "volume", result);
         }
 
@@ -120,7 +120,7 @@ namespace Calculator.Domain
             var block = new Calculations.Operations.Surface.Block();
             double result = block.Calculate(a, b, c);
 
-            var displayResult = new TrippleSideDIsplayResult();
+            var displayResult = new TernaryOperationResultView();
             displayResult.DisplayResult(a, b, c, "block", "surface", result);
         }
 
@@ -135,7 +135,7 @@ namespace Calculator.Domain
             var block = new Calculations.Operations.Volume.Block();
             double result = block.Calculate(a, b, c);
 
-            var displayResult = new TrippleSideDIsplayResult();
+            var displayResult = new TernaryOperationResultView();
             displayResult.DisplayResult(a, b, c, "block", "volume", result);
         }
 
@@ -151,7 +151,7 @@ namespace Calculator.Domain
             var circle = new Calculations.Operations.Area.Circle();
             double result = circle.Calculate(a);
 
-            var displayResult = new MonoSideDisplayResult();
+            var displayResult = new UnaryOperationResultView();
             displayResult.DisplayResult(a, "circle", "area", result);
         }
 
@@ -166,7 +166,7 @@ namespace Calculator.Domain
             var circle = new Calculations.Operations.Circumference.Circle();
             double result = circle.Calculate(a);
 
-            var displayResult = new MonoSideDisplayResult();
+            var displayResult = new UnaryOperationResultView();
             displayResult.DisplayResult(a, "circle", "circumference", result);
         }
     }

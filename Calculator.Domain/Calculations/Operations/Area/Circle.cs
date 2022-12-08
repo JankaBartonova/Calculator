@@ -3,7 +3,7 @@ using Calculator.Domain.Exceptions;
 
 namespace Calculator.Domain.Calculations.Operations.Area
 {
-    public class Circle : IMonoSideShape
+    public class Circle : IUnaryOperation
     {
         public double Calculate(double a)
         {

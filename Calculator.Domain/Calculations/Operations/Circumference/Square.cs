@@ -2,7 +2,7 @@
 
 namespace Calculator.Domain.Calculations.Operations.Circumference
 {
-    public class Square : IMonoSideShape
+    public class Square : IUnaryOperation
     {
         public double Calculate(double a)
         {

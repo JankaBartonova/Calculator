@@ -3,7 +3,7 @@ using Calculator.Domain.Views.Interfaces;
 
 namespace Calculator.Domain.Views
 {
-    public class TrippleSideDIsplayResult : ITrippleSideDisplayResult
+    public class TernaryOperationResultView : ITernaryOperationResultView
     {
         public void DisplayResult(double a, double b, double c, string shape, string operation, double result)
         {
