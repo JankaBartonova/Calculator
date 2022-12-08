@@ -1,20 +1,18 @@
-﻿using System;
-using Xunit;
-using Calculator.Domain.Calculations.Volume;
+﻿using Xunit;
+using Calculator.Domain.Calculations.Shapes.Surface;
 using Calculator.Domain.Exceptions;
 
-namespace Calculator.Tests.Calculations.Volume
+namespace Calculator.Tests.Calculations.Surface
 {
-    public class VolumeBlockTest
+    public class SurfaceBlockTest
     {
         [Theory]
-        [InlineData(1, 1, 1, 1)]
-        [InlineData(1.5, 1, 1, 1.5)]
-        [InlineData(1, 1.5, 1, 1.5)]
-        [InlineData(1, 1, 1.5, 1.5)]
-        [InlineData(double.MaxValue, 1, 1, double.MaxValue)]
-        [InlineData(double.MaxValue, 1, 2, double.PositiveInfinity)]
-        public void VolumeBlock_ArgGiven_ReturnsCalculatedValue(double a, double b, double c, double expected)
+        [InlineData(1, 1, 1, 6)]
+        [InlineData(1.5, 1, 1, 8)]
+        [InlineData(1, 1.5, 1, 8)]
+        [InlineData(1, 1, 1.5, 8)]
+        [InlineData(double.MaxValue, 1, 1, double.PositiveInfinity)]
+        public void SurfaceBlock_ArgsGiven_ReturnsCalculatedValue(double a, double b, double c, double expected)
         {
             var block = new Block();
 
@@ -30,7 +28,7 @@ namespace Calculator.Tests.Calculations.Volume
         [InlineData(double.MinValue, 1, 1)]
         [InlineData(1, double.MinValue, 1)]
         [InlineData(1, 1, double.MinValue)]
-        public void VolumeBlock_ArgsAreLessThanZero_ReturnsException(double a, double b, double c)
+        public void SurfaceBlock_ArgsAreLessThanZero_ReturnsException(double a, double b, double c)
         {
             var block = new Block();
 
@@ -41,7 +39,7 @@ namespace Calculator.Tests.Calculations.Volume
         [InlineData(double.NaN, 1, 1)]
         [InlineData(1, double.NaN, 1)]
         [InlineData(1, 1, double.NaN)]
-        public void VolumeBlock_ArgsAreNotANumber_ReturnsArgumentException(double a, double b, double c)
+        public void SurfaceBlock_ArgsAreNotANumber_ReturnsArgumentException(double a, double b, double c)
         {
             var block = new Block();
 

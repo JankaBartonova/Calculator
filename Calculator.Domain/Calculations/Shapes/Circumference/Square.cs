@@ -1,9 +1,8 @@
-﻿using System;
-using Calculator.Domain.Exceptions;
+﻿using Calculator.Domain.Exceptions;
 
-namespace Calculator.Domain.Calculations.Volume
+namespace Calculator.Domain.Calculations.Shapes.Circumference
 {
-    public class Cube : IMonoSideShape
+    public class Square : IMonoSideShape
     {
         public double Calculate(double a)
         {
@@ -17,7 +16,7 @@ namespace Calculator.Domain.Calculations.Volume
                 throw new NotANumberException();
             }
 
-            return a * a * a;
+            return 4 * a;
         }
     }
 }

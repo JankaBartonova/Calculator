@@ -1,6 +1,5 @@
-﻿using System;
-using Xunit;
-using Calculator.Domain.Calculations.Volume;
+﻿using Xunit;
+using Calculator.Domain.Calculations.Shapes.Volume;
 using Calculator.Domain.Exceptions;
 
 namespace Calculator.Tests.Calculations.Volume

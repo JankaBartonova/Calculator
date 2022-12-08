@@ -1,6 +1,5 @@
-﻿using System;
-using Xunit;
-using Calculator.Domain.Calculations.Area;
+﻿using Xunit;
+using Calculator.Domain.Calculations.Shapes.Area;
 using Calculator.Domain.Exceptions;
 
 namespace Calculator.Tests.Calculations.Area

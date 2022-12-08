@@ -1,7 +1,6 @@
-﻿using System;
-using Calculator.Domain.Exceptions;
+﻿using Calculator.Domain.Exceptions;
 
-namespace Calculator.Domain.Calculations.Surface
+namespace Calculator.Domain.Calculations.Shapes.Surface
 {
     public class Block : ITrippleSideShape
     {
