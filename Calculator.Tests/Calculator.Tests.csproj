@@ -30,11 +30,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Calculations\" />
-    <Folder Include="Calculations\Shapes\" />
-    <Folder Include="Calculations\Shapes\Area\" />
-    <Folder Include="Calculations\Shapes\Circumference\" />
-    <Folder Include="Calculations\Shapes\Surface\" />
-    <Folder Include="Calculations\Shapes\Volume\" />
+    <Folder Include="Calculations\Operations\" />
+    <Folder Include="Calculations\Operations\Area\" />
+    <Folder Include="Calculations\Operations\Circumference\" />
+    <Folder Include="Calculations\Operations\Surface\" />
+    <Folder Include="Calculations\Operations\Volume\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Calculator.Domain\Calculator.Domain.csproj" />
