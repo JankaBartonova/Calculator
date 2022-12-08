@@ -17,9 +17,7 @@ namespace Calculator.Domain.Calculations.Operations.Area
                 throw new NotANumberException();
             }
 
-            double result = Math.PI * Math.Pow(a, 2);
-
-            return Math.Round(result, 5);
+            return Math.PI * Math.Pow(a, 2);
         }
     }
 }

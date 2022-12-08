@@ -17,9 +17,7 @@ namespace Calculator.Domain.Calculations.Operations.Circumference
                 throw new NotANumberException();
             }
 
-            double result = 2 * Math.PI * a;
-
-            return Math.Round(result, 5);
+            return 2 * Math.PI * a;
         }
     }
 }

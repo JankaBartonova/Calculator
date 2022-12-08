@@ -16,7 +16,8 @@ namespace Calculator.Tests.Calculations.Circumference
 
             double actual = circle.Calculate(a);
 
-            Assert.Equal(actual, expected);
+            // result rounded to 5 decimal digits
+            Assert.Equal(expected, actual, 5);
         }
 
         [Theory]
