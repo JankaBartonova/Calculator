@@ -138,5 +138,36 @@ namespace Calculator.Domain
             var displayResult = new TrippleSideDIsplayResult();
             displayResult.DisplayResult(a, b, c, "block", "volume", result);
         }
+
+
+        [Command(
+        Description = "Calculate area of circle of given radius",
+        UsageLines = new[]
+        {
+            "%AppName% %CmdPath% <a>"
+        })]
+        public void CircleArea(double a)
+        {
+            var circle = new Calculations.Area.Circle();
+            double result = circle.Calculate(a);
+
+            var displayResult = new MonoSideDisplayResult();
+            displayResult.DisplayResult(a, "circle", "area", result);
+        }
+
+        [Command(
+        Description = "Calculate circumference of circle of given radius",
+        UsageLines = new[]
+        {
+            "%AppName% %CmdPath% <a>"
+        })]
+        public void CircleCircumference(double a)
+        {
+            var circle = new Calculations.Circumference.Circle();
+            double result = circle.Calculate(a);
+
+            var displayResult = new MonoSideDisplayResult();
+            displayResult.DisplayResult(a, "circle", "circumference", result);
+        }
     }
 }
