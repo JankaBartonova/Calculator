@@ -1,7 +1,6 @@
-﻿using System;
-using Calculator.Domain.Exceptions;
+﻿using Calculator.Domain.Exceptions;
 
-namespace Calculator.Domain.Calculations.Surface
+namespace Calculator.Domain.Calculations.Shapes.Volume
 {
     public class Cube : IMonoSideShape
     {
@@ -17,7 +16,7 @@ namespace Calculator.Domain.Calculations.Surface
                 throw new NotANumberException();
             }
 
-            return 6 * a * a;
+            return a * a * a;
         }
     }
 }

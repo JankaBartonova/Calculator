@@ -1,7 +1,6 @@
-﻿using System;
-using Calculator.Domain.Exceptions;
+﻿using Calculator.Domain.Exceptions;
 
-namespace Calculator.Domain.Calculations.Circumference
+namespace Calculator.Domain.Calculations.Shapes.Area
 {
     public class Rectangle : IDoubleSideShape
     {
@@ -17,7 +16,7 @@ namespace Calculator.Domain.Calculations.Circumference
                 throw new NotANumbersException();
             }
 
-            return 2 * (a + b);
+            return a * b;
         }
     }
 }

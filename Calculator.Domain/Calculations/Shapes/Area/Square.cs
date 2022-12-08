@@ -1,7 +1,6 @@
-﻿using System;
-using Calculator.Domain.Exceptions;
+﻿using Calculator.Domain.Exceptions;
 
-namespace Calculator.Domain.Calculations.Area
+namespace Calculator.Domain.Calculations.Shapes.Area
 {
     public class Square : IMonoSideShape
     {

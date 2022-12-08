@@ -1,6 +1,5 @@
-﻿using System;
-using Xunit;
-using Calculator.Domain.Calculations.Circumference;
+﻿using Xunit;
+using Calculator.Domain.Calculations.Shapes.Circumference;
 using Calculator.Domain.Exceptions;
 
 namespace Calculator.Tests.Calculations.Circumference

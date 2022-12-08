@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Calculator.Domain.Views.Interfaces
+﻿namespace Calculator.Domain.Views.Interfaces
 {
     public interface ITrippleSideDisplayResult
     {

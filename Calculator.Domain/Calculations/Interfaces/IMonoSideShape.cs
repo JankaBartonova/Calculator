@@ -1,5 +1,4 @@
-﻿using System;
-namespace Calculator.Domain.Calculations
+﻿namespace Calculator.Domain.Calculations
 {
     public interface IMonoSideShape
     {

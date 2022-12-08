@@ -23,7 +23,7 @@ namespace Calculator.Domain
         })]
         public void SquareArea(double a)
         {
-            var square = new Calculations.Area.Square();
+            var square = new Calculations.Shapes.Area.Square();
             double result = square.Calculate(a);
 
             var displayResult = new MonoSideDisplayResult();
@@ -38,7 +38,7 @@ namespace Calculator.Domain
         })]
         public void SquareCircumference(double a)
         {
-            var square = new Calculations.Circumference.Square();
+            var square = new Calculations.Shapes.Circumference.Square();
             double result = square.Calculate(a);
 
             var displayResult = new MonoSideDisplayResult();
@@ -54,7 +54,7 @@ namespace Calculator.Domain
         })]
         public void RectangleArea(double a, double b)
         {
-            var rectangle = new Calculations.Area.Rectangle();
+            var rectangle = new Calculations.Shapes.Area.Rectangle();
             double result = rectangle.Calculate(a, b);
 
             var displayResult = new DoubleSideDisplayResult();
@@ -69,7 +69,7 @@ namespace Calculator.Domain
         })]
         public void RectangleCircumference(double a, double b)
         {
-            var rectangle = new Calculations.Circumference.Rectangle();
+            var rectangle = new Calculations.Shapes.Circumference.Rectangle();
             double result = rectangle.Calculate(a, b);
 
             var displayResult = new DoubleSideDisplayResult();
@@ -85,7 +85,7 @@ namespace Calculator.Domain
         })]
         public void CubeSurface(double a)
         {
-            var cube = new Calculations.Surface.Cube();
+            var cube = new Calculations.Shapes.Surface.Cube();
             double result = cube.Calculate(a);
 
             var displayResult = new MonoSideDisplayResult();
@@ -101,7 +101,7 @@ namespace Calculator.Domain
         })]
         public void CubeVolume(double a)
         {
-            var cube = new Calculations.Volume.Cube();
+            var cube = new Calculations.Shapes.Volume.Cube();
             double result = cube.Calculate(a);
 
             var displayResult = new MonoSideDisplayResult();
@@ -117,7 +117,7 @@ namespace Calculator.Domain
         })]
         public void BlockSurface(double a, double b, double c)
         {
-            var block = new Calculations.Surface.Block();
+            var block = new Calculations.Shapes.Surface.Block();
             double result = block.Calculate(a, b, c);
 
             var displayResult = new TrippleSideDIsplayResult();
@@ -132,7 +132,7 @@ namespace Calculator.Domain
         })]
         public void BlockVolume(double a, double b, double c)
         {
-            var block = new Calculations.Volume.Block();
+            var block = new Calculations.Shapes.Volume.Block();
             double result = block.Calculate(a, b, c);
 
             var displayResult = new TrippleSideDIsplayResult();
