@@ -8,6 +8,7 @@ Shapes:
 - rectangle
 - cube
 - block
+- circle
 
 Operations:
 - Area
@@ -32,3 +33,7 @@ Commands:
 `BlockSurface <a> <b> <c>`	Calculates surface of a block of given size
 
 `BlockVolume <a> <b> <c>`	Calculates volume of a block of given size
+
+`CircleArea <a>`	Calculates area of a circle of given radius
+
+`CircleCircumference <a>`	Calculates circumference of a circle of given radius 
